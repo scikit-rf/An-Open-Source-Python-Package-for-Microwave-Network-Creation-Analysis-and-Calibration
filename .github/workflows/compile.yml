@@ -2,15 +2,15 @@ name: Build LaTeX document
 
 # Triggers the workflow on push or pull request events
 on: [push, pull_request]
-  
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Compile LaTeX document
-        uses: dante-ev/latex-action@master
+        uses: dante-ev/latex-action@lastest
         with:
           root_file: scikitrf_paper_JMW.tex
 
